@@ -127,7 +127,7 @@ Response:
 
 # Запуск проекта
 
-Необхожимо поменять в файле `database/connection.go` данные для вашей базы данных
+Необходимо поменять в файле `database/connection.go` данные для вашей базы данных
 
 ```
 connStr := "user=postgres password=postgres dbname=dbname sslmode=disable"
