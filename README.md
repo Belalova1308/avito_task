@@ -127,7 +127,13 @@ Response:
 
 # Запуск проекта
 
-Для запуска необходимо добавить в базу данных таблицу (`database.sql`)
+Необхожимо поменять в файле `database/connection.go` данные для вашей базы данных
+
+```
+connStr := "user=postgres password=postgres dbname=dbname sslmode=disable"
+```
+
+Далее добавить в базу данных таблицу (`database.sql`)
 
 Запуск
 
