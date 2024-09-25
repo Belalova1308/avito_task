@@ -1,4 +1,4 @@
-module api-with-go-postgres
+module mymodule
 
 go 1.21.3
 

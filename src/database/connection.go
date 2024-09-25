@@ -3,12 +3,11 @@ package database
 import (
 	"database/sql"
 	"fmt"
-
-	_ "github.com/lib/pq"
+	"os"
 )
 
 func Connect() *sql.DB {
-	connStr := "user=postgres password=postgres dbname=dbname sslmode=disable"
+	connStr := os.Getenv("POSTGRES_CONN")
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err)
@@ -23,6 +22,6 @@ func Connect() *sql.DB {
 		panic(err)
 	}
 
-	fmt.Println("Connected in PostgreSQL...")
+	fmt.Println("Connected to PostgreSQL...")
 	return db
 }
